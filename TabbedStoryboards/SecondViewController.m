@@ -1,9 +1,9 @@
 //
 //  SecondViewController.m
-//  TabbedStoryboards
+//  tabbed
 //
-//  Created by travis on 2015-04-27.
-//  Copyright (c) 2015 C4. All rights reserved.
+//  Created by moi on 12-10-15.
+//  Copyright (c) 2012 moi. All rights reserved.
 //
 
 #import "SecondViewController.h"
@@ -14,14 +14,31 @@
 
 @implementation SecondViewController
 
-- (void)viewDidLoad {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.title = NSLocalizedString(@"Second", @"Second");
+        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+    }
+    return self;
+}
+							
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
 }
 
 @end

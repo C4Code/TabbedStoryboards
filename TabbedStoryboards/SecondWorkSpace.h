@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  SecondWorkSpace.h
 //  tabbed
 //
 //  Created by moi on 12-10-15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface SecondWorkSpace : C4CanvasController
 
 @end

@@ -1,15 +1,13 @@
 //
 //  SecondViewController.h
-//  TabbedStoryboards
+//  tabbed
 //
-//  Created by travis on 2015-04-27.
-//  Copyright (c) 2015 C4. All rights reserved.
+//  Created by moi on 12-10-15.
+//  Copyright (c) 2012 moi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
 
-
 @end
-

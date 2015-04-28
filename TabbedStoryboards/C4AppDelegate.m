@@ -27,18 +27,18 @@
     // NB: your windowing code goes here - e.g. self.window.rootViewController = self.viewController;
     
     application.statusBarHidden = YES;
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     
-    self.firstWorkspace = [[FirstWorkSpace alloc] initWithNibName:@"firstCanvas" bundle:nil];
-    self.secondWorkspace = [[SecondWorkSpace alloc] initWithNibName:@"secondCanvas" bundle:nil];
-    
-    self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = @[self.firstWorkspace, self.secondWorkspace];
-    self.window.rootViewController = self.tabBarController;
-    [self.window makeKeyAndVisible];
-    [self.firstWorkspace setup];
-    [self.secondWorkspace setup];
+//    self.firstWorkspace = [[FirstWorkSpace alloc] initWithNibName:@"firstCanvas" bundle:nil];
+//    self.secondWorkspace = [[SecondWorkSpace alloc] initWithNibName:@"secondCanvas" bundle:nil];
+//    
+//    self.tabBarController = [[UITabBarController alloc] init];
+//    self.tabBarController.viewControllers = @[self.firstWorkspace, self.secondWorkspace];
+//    self.window.rootViewController = self.tabBarController;
+//    [self.window makeKeyAndVisible];
+//    [self.firstWorkspace setup];
+//    [self.secondWorkspace setup];
     return YES;
 }
 

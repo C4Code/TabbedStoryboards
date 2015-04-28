@@ -24,6 +24,7 @@
 @property(nonatomic, strong) C4Control *canvas;
 @property(nonatomic, strong) NSString *longPressMethodName;
 @property(nonatomic, strong) NSMutableDictionary *gestureDictionary;
+@property(nonatomic) BOOL shouldLoadCanvasFromView;
 @end
 
 @implementation C4CanvasController
@@ -45,7 +46,7 @@
     self = [super initWithCoder:decoder];
     if (!self)
         return nil;
-    [self createCanvas];
+    self.shouldLoadCanvasFromView = YES;
     [self listenFor:@"movieIsReadyForPlayback" andRun:^(NSNotification *n) {
         [self movieIsReadyForPlayback:n];
     }];
@@ -56,7 +57,7 @@
     self = [super initWithNibName:nibName bundle:nibBundle];
     if (!self)
         return nil;
-    [self createCanvas];
+    [self createCanvasWithView:self.view];
     [self listenFor:@"movieIsReadyForPlayback" andRun:^(NSNotification *n) {
         [self movieIsReadyForPlayback:n];
     }];
@@ -70,10 +71,41 @@
     }
 }
 
+//-(id)initWithView:(UIView *)view {
+//    self = [super init];
+//    if (!self)
+//        return nil;
+//    [self createCanvasWithView:view];
+//    [self listenFor:@"movieIsReadyForPlayback" andRun:^(NSNotification *n) {
+//        [self movieIsReadyForPlayback:n];
+//    }];
+//    return self;
+//}
+
+-(void)createCanvasWithView:(UIView *)view {
+    _canvas = [[C4Control alloc] initWithView:view];
+    _canvas.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    [self.canvas onTap:^(CGPoint location) {
+        [self tapped:location];
+    }];
+    
+    [self.canvas onLongPressEnd:^(CGPoint location) {
+        [self longPressEnded:location];
+    }];
+    
+    [self.canvas onLongPressStart:^(CGPoint location) {
+        [self longPressStarted:location];
+    }];
+    
+    [self.canvas onPan:^(CGPoint location, CGPoint translation, CGPoint velocity) {
+        [self panned:location translation:translation velocity:velocity];
+    }];
+}
+
 - (void)createCanvas {
     _canvas = [[C4Control alloc] init];
     _canvas.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.view = self.canvas.view;
     
     [self.canvas onTap:^(CGPoint location) {
         [self tapped:location];
@@ -96,9 +128,14 @@
 }
 
 - (void)viewDidLoad {
-    CGSize size = self.view.bounds.size;
-    self.canvas.frame = CGRectMake(0, 0, size.width, size.height);
-    [self.view addSubview:self.canvas.view];
+    if(self.shouldLoadCanvasFromView) {
+        [self createCanvasWithView:self.view];
+        [self setup];
+    } else {
+        CGSize size = self.view.bounds.size;
+        self.canvas.frame = CGRectMake(0, 0, size.width, size.height);
+        [self.view addSubview:self.canvas.view];
+    }
 }
 
 

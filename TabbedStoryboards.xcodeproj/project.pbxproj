@@ -12,8 +12,6 @@
 		D94643BE1AEEDCD600FE7242 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94643BD1AEEDCD600FE7242 /* Images.xcassets */; };
 		D94643C11AEEDCD600FE7242 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D94643BF1AEEDCD600FE7242 /* LaunchScreen.xib */; };
 		D94643CD1AEEDCD700FE7242 /* TabbedStoryboardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D94643CC1AEEDCD700FE7242 /* TabbedStoryboardsTests.m */; };
-		D94643DE1AEEDD0000FE7242 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D94643D71AEEDD0000FE7242 /* FirstViewController.m */; };
-		D94643DF1AEEDD0000FE7242 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D94643D91AEEDD0000FE7242 /* SecondViewController.m */; };
 		D94643E01AEEDD0000FE7242 /* FirstWorkSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = D94643DB1AEEDD0000FE7242 /* FirstWorkSpace.m */; };
 		D94643E11AEEDD0000FE7242 /* SecondWorkSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = D94643DD1AEEDD0000FE7242 /* SecondWorkSpace.m */; };
 		D94643E61AEEDD0600FE7242 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = D94643E21AEEDD0600FE7242 /* first.png */; };
@@ -77,10 +75,6 @@
 		D94643C61AEEDCD700FE7242 /* TabbedStoryboardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabbedStoryboardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94643CB1AEEDCD700FE7242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D94643CC1AEEDCD700FE7242 /* TabbedStoryboardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabbedStoryboardsTests.m; sourceTree = "<group>"; };
-		D94643D61AEEDD0000FE7242 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		D94643D71AEEDD0000FE7242 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		D94643D81AEEDD0000FE7242 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		D94643D91AEEDD0000FE7242 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		D94643DA1AEEDD0000FE7242 /* FirstWorkSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstWorkSpace.h; sourceTree = "<group>"; };
 		D94643DB1AEEDD0000FE7242 /* FirstWorkSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstWorkSpace.m; sourceTree = "<group>"; };
 		D94643DC1AEEDD0000FE7242 /* SecondWorkSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondWorkSpace.h; sourceTree = "<group>"; };
@@ -209,10 +203,6 @@
 				D94643E41AEEDD0600FE7242 /* second.png */,
 				D94643E51AEEDD0600FE7242 /* second@2x.png */,
 				D94643BA1AEEDCD600FE7242 /* Main.storyboard */,
-				D94643D61AEEDD0000FE7242 /* FirstViewController.h */,
-				D94643D71AEEDD0000FE7242 /* FirstViewController.m */,
-				D94643D81AEEDD0000FE7242 /* SecondViewController.h */,
-				D94643D91AEEDD0000FE7242 /* SecondViewController.m */,
 				D94643DA1AEEDD0000FE7242 /* FirstWorkSpace.h */,
 				D94643DB1AEEDD0000FE7242 /* FirstWorkSpace.m */,
 				D94643DC1AEEDD0000FE7242 /* SecondWorkSpace.h */,
@@ -438,7 +428,6 @@
 			files = (
 				D946443F1AEEDD2C00FE7242 /* C4GL1Renderer.m in Sources */,
 				D946444D1AEEDD2C00FE7242 /* C4UIElement.m in Sources */,
-				D94643DF1AEEDD0000FE7242 /* SecondViewController.m in Sources */,
 				D94644421AEEDD2C00FE7242 /* C4Math.m in Sources */,
 				D94644431AEEDD2C00FE7242 /* C4Movie.m in Sources */,
 				D946444E1AEEDD2C00FE7242 /* C4Vector.m in Sources */,
@@ -447,7 +436,6 @@
 				D946443A1AEEDD2C00FE7242 /* C4EAGLESRenderer.m in Sources */,
 				D94644341AEEDD2C00FE7242 /* C4AssertionHandler.m in Sources */,
 				D946444F1AEEDD2C00FE7242 /* C4UIGLControl.m in Sources */,
-				D94643DE1AEEDD0000FE7242 /* FirstViewController.m in Sources */,
 				D94644531AEEDD2C00FE7242 /* UIView+C4AddControl.m in Sources */,
 				D94644501AEEDD2C00FE7242 /* C4UIMovieControl.m in Sources */,
 				D946443E1AEEDD2C00FE7242 /* C4GL.m in Sources */,
@@ -674,6 +662,7 @@
 				D94643D21AEEDCD700FE7242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D94643D31AEEDCD700FE7242 /* Build configuration list for PBXNativeTarget "TabbedStoryboardsTests" */ = {
 			isa = XCConfigurationList;
@@ -682,6 +671,7 @@
 				D94643D51AEEDCD700FE7242 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

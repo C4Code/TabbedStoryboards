@@ -9,6 +9,7 @@
 #import "FirstWorkSpace.h"
 
 @implementation FirstWorkSpace
+
 -(void)setup {
     self.canvas.backgroundColor = C4BLUE;
     self.title = @"First";
